@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>Chapter 43 to 48</h1>
+    <h3>Q1</h3>
+    <a href="" onclick="Q1_43to48()">Click Me</a>
+    <h3>Q2</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <img src="photo/download (1).jpg" class="col-3" onclick="Q2_43to48() ">
+            <img src="photo/download (2).jpg" class="col-3" onclick="Q2_43to48() ">
+            <img src="photo/download.jpg" class="col-3" onclick="Q2_43to48()">
+            <img src="photo/images.jpg" class="col-3" onclick="Q2_43to48()">
+        </div>
+    </div>
+    <h3>Q3</h3>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>moiz</td>
+            <td>9</td>
+            <td><input type="button" value="Delete" onclick="deleterow(this)"></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>huzaifa</td>
+            <td>10</td>
+            <td><input type="button" value="Delete" onclick="deleterow(this)"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>zubair</td>
+            <td>10</td>
+            <td><input type="button" value="Delete" onclick="deleterow(this)"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Hamza</td>
+            <td>8</td>
+            <td><input type="button" value="Delete" onclick="deleterow(this)"></td>
+        </tr>
+    </table>
+    <h3>Q4</h3>
+    <img src="photo/happy.jpg" onmouseover="changepic('chpic', 'photo/sad.jpg')"
+        onmouseout="changepic('chpic', 'photo/happy.jpg')" id="chpic">
+    <div>
+        <h3>Q5</h3>
+        <button onclick="incre()">Increament</button>
+        <button onclick="decre()">Decreament</button>
+        <p>
+        <h1 id="counter">0</h1>
+        </p>
+    </div>
+    <h1>Chapter 49 to 52</h1>
+    <h3>Q1</h3>
+    <div id="form1" class="signform container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-0 col-0"></div>
+            <div class="signform2 col-md-8 col-sm-12 col-12">
+                <!-- <form action=""> -->
+                <h1>Sign UP</h1>
+                <h5>Please Fill In This Form To Create An Account!</h5>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-6">
+                        <input type="text" class="input1" id="f-name" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-6">
+                        <input type="text" class="input1" id="L-name" placeholder="Last Name">
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <input type="email" class="input1" id="email" placeholder="Email">
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <input type="password" class="input1" id="pass" placeholder="Password">
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <input type="password" class="input1" id="c-pass" placeholder="Confirm Password">
+                    </div>
+                    <div class="input4 col-md-12 col-sm-12 col-12">
+                        <p class="input2"><input type="checkbox" class="input3"></p>
+                        <p class="input3">I Accept The <a href="">Term Of Use</a> & <a href="">Privacy Policy</a></p>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-12">
+                        <button class="signbtn" onclick="formdata()">Sign UP</button>
+                    </div>
+                    </option>
+                </div>
+                <!-- </form> -->
+            </div>
+            <div class="col-md-2 col-sm-0 col-0"></div>
+        </div>
+    </div>
+    <div id="data2" class="formdata2 container-fluid">
+        <div>
+            <h4 class="formname">First Name = </h4>
+            <h4 class="formname" id="f-name2"></h4>
+        </div>
+        <div>
+            <h4 class="formname">Last Name = </h4>
+            <h4 class="formname" id="L-name2"></h4>
+        </div>
+        <div>
+            <h4 class="formname">Email = </h4>
+            <h4 class="formname" id="email2"></h4>
+        </div>
+        <div>
+            <h4 class="formname">Password = </h4>
+            <h4 class="formname" id="pass2"></h4>
+        </div>
+        <div>
+            <h4 class="formname">Confirm Password = </h4>
+            <h4 class="formname" id="c-pass2"></h4>
+        </div>
+    </div>
+    <h3>Q2</h3>
+    <div>
+        <p class="p1" id="p1">
+            Suppose in your webpage there is content area in which
+            you have entered your item details,
+            <a href="javascript:void(0);" id="readmore" onclick="readmore()">Read More</a>
+        </p>
+        <p class="p1" id="p2">
+            but user can only see
+            some details on first look. When user clicks on “Read
+            more” button, full detail of that particular item will be
+            displayed.
+        </p>
+    </div>
+    <h3>Q3</h3>
+    <div>
+        <table id="studentdata">
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="t1()">abb</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
