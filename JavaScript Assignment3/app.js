@@ -205,43 +205,143 @@
 //     p1.style.display = "inline";
 // }
 // Q3
-// var studentdata = document.getElementById("studentdata");
-// var ind = 0;
-// var ind2 = 0;
-// var ind3 = 0;
-// function t1() {
-//     var tr = document.createElement('tr')
-//     var td = document.createElement('td')
-//     tr.appendChild(td)
-//     ind += 1;
-//     var tx = document.createTextNode(ind);
-//     td.appendChild(tx);
-//     var td2 = document.createElement('td')
-//     tr.appendChild(td2)
-//     ind2 += 1;
-//     var tx2 = document.createTextNode(ind2);
-//     td2.appendChild(tx2);
-//     var td3 = document.createElement('td')
-//     tr.appendChild(td3)
-//     ind3 += 1;
-//     var tx3 = document.createTextNode(ind3);
-//     td3.appendChild(tx3);
-//     var td4 = document.createElement('td');
-//     tr.appendChild(td4);
-//     var button = document.createElement('input');
-//     button.setAttribute('type', 'button');
-//     button.setAttribute('value', 'Delete');
-//     button.setAttribute('onclick', 'removeRow(this)');
-//     button.style.width = '100%'
-//     td4.appendChild(button);
-//     var studentdata = document.getElementById("studentdata");
-//     studentdata.appendChild(tr)
-//     studentdata.appendChild(td)
-//     studentdata.appendChild(td2)
-//     studentdata.appendChild(td3)
-//     studentdata.appendChild(td4)
-// }
-// function removeRow(oButton) {
-//     var empTab = document.getElementById('studentdata');
-//     empTab.removeRow(oButton);
-// }
+function stddata() {
+    var data = document.getElementById("datahide");
+    data.style.display = "block";
+}
+var ind = 0;
+function studentdata() {
+    var table = document.getElementById("studentdata");
+    var tr = document.createElement('tr');
+    table.appendChild(tr);
+    var td = document.createElement('td');
+    tr.appendChild(td);
+    ind += 1;
+    td.innerText = ind;
+    var td2 = document.createElement('td');
+    tr.appendChild(td2);
+    var text1 = document.getElementById("stdname");
+    td2.innerText = text1.value;
+    var td3 = document.createElement('td');
+    tr.appendChild(td3);
+    var text2 = document.getElementById("class");
+    td3.innerText = text2.value;
+    var td4 = document.createElement('td');
+    tr.appendChild(td4);
+    var editbtn = document.createElement('button');
+    editbtn.innerText = "Edit";
+    editbtn.style.width = "100%";
+    editbtn.setAttribute('onclick', 'editbtn(this)');
+    editbtn.setAttribute('class', 'editbtn');
+    td4.appendChild(editbtn);
+    var td5 = document.createElement('td');
+    tr.appendChild(td5);
+    var dltbtn = document.createElement('button');
+    dltbtn.innerText = "Delete";
+    dltbtn.style.width = "100%";
+    dltbtn.setAttribute('onclick', 'deletebtn(this)');
+    dltbtn.setAttribute('class', 'dltbtn');
+    td5.appendChild(dltbtn);
+    text1.value = "";
+    text2.value = "";
+    var data = document.getElementById("datahide")
+    data.style.display = "none";
+}
+function deletebtn(i) {
+    i.parentNode.parentNode.remove()
+}
+function editbtn(j) {
+    var td1 = j.parentNode.parentNode.firstChild.nextElementSibling.childNodes[0].nodeValue;
+    var name = prompt("Enter Your Name:", td1);
+    j.parentNode.parentNode.firstChild.nextElementSibling.childNodes[0].nodeValue = name;
+    var td2 = j.parentNode.previousElementSibling.childNodes[0].nodeValue;
+    var class1 = prompt("Enter Your Name:", td2);
+    j.parentNode.previousElementSibling.childNodes[0].nodeValue = class1;
+}
+// Chapter 52 to 57
+// Q1
+var modal = document.getElementById('myModal');
+var images = document.querySelectorAll(".img-thumbnail");
+var modalImg = document.getElementById("img01");
+modalImg.style.width = "500px";
+var captionText = document.getElementById("caption");
+var zoom = document.getElementById("zoom1")
+for (let i = 0; i < images.length; i++) {
+    images[i].onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+}
+function zoomPlus() {
+    var zoomimg = modalImg.width;
+    var zoomimg2 = modalImg.height;
+    modalImg.style.width = (zoomimg + 10) + "px";
+    modalImg.style.height = (zoomimg2 + 10) + "px";
+}
+function zoomMinus() {
+    var zoomimg = modalImg.width;
+    var zoomimg2 = modalImg.height;
+    modalImg.style.width = (zoomimg - 10) + "px";
+    modalImg.style.height = (zoomimg2 - 10) + "px";
+}
+// Chapter 58 to 67
+// Q1
+var main_content = document.getElementById("main-content");
+var main_content2 = main_content.innerHTML;
+var display_content = document.getElementById("display-content");
+display_content.innerText = main_content2;
+
+
+
+var checkClass = main_content.getElementsByClassName("render");
+var eleClass = document.getElementById("eleClass");
+for (var i = 0; i < checkClass.length; i++) {
+    var insertdata = checkClass[i].innerText;
+    // console.log(checkClass[i].innerText);
+
+}
+
+
+
+function Q1DataSubmit() {
+    var email12 = document.getElementById("email123");
+    var firstName = document.getElementById("first-name");
+    var lastName = document.getElementById("last-name");
+    var data = document.getElementById("name1");
+    data.innerHTML = firstName.value;
+    var data2 = document.getElementById("name2");
+    data2.innerHTML = lastName.value;
+    var data3 = document.getElementById("email12");
+    data3.innerHTML = email12.value;
+    email12.value = "";
+    firstName.value = "";
+    lastName.value = "";
+}
+// Q2
+var formContent = document.getElementById("form-content");
+var olli1 = document.getElementById("olli1"); 
+olli1.innerText += formContent.nodeType;
+var lastname1 = document.getElementById("lastName");
+var olli2 = document.getElementById("olli2");
+olli2.innerText += lastname1.nodeType; 
+var olli3 = document.getElementById("olli3");
+olli3.innerText += lastname1.firstChild.nodeType;
+var oll = document.getElementById("main-content");
+var olli4 = document.getElementById("olli4");
+olli4.innerText += oll.firstElementChild.outerHTML
+var olli5 = document.getElementById("olli5");
+olli5.innerText += oll.lastElementChild.outerHTML;
+var olli6 = document.getElementById("olli6");
+olli6.innerText += lastname1.nextElementSibling.outerHTML
+var olli7 = document.getElementById("olli7");
+olli7.innerText += lastname1.previousElementSibling.outerHTML;
+var hemail = document.getElementById("email123");
+var olli8 = document.getElementById("olli8");
+olli8.innerText += hemail.parentElement.outerHTML;
+var olli9 = document.getElementById("olli9");
+olli9.innerText += hemail.parentNode.nodeType;

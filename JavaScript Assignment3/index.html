@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
 </head>
 
@@ -72,7 +73,6 @@
         <div class="row">
             <div class="col-md-2 col-sm-0 col-0"></div>
             <div class="signform2 col-md-8 col-sm-12 col-12">
-                <!-- <form action=""> -->
                 <h1>Sign UP</h1>
                 <h5>Please Fill In This Form To Create An Account!</h5>
                 <hr>
@@ -101,7 +101,6 @@
                     </div>
                     </option>
                 </div>
-                <!-- </form> -->
             </div>
             <div class="col-md-2 col-sm-0 col-0"></div>
         </div>
@@ -143,6 +142,14 @@
         </p>
     </div>
     <h3>Q3</h3>
+    <p>Click Insert Student Data Button For Insert Data</p>
+    <button onclick="stddata()">Insert Student Data</button>
+    <div id="datahide">
+        <h1>studentsdata</h1>
+        <p>Name: <input id="stdname" type="text" placeholder="Enter Your Name"></p>
+        <p>Class : <input id="class" type="text" placeholder="Enter Your Class"></p>
+        <input type="submit" value="Submit" id="submit2" onclick="studentdata()">
+    </div>
     <div>
         <table id="studentdata">
             <tr>
@@ -152,13 +159,82 @@
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-            <tr>
-                <td>
-                    <button onclick="t1()">abb</button>
-                </td>
-            </tr>
         </table>
     </div>
+    <h1>Chapter 52 to 57</h1>
+    <h3>Q1</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                <img id="myImg1" src="photo/1.jpg" class="img-thumbnail" alt="photo 1"
+                    style="width:100%; height: 100%;">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                <img id="myImg2" src="photo/3.jpg" class="img-thumbnail" alt="photo 2"
+                    style="width:100%; height: 100%;">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                <img id="myImg2" src="photo/10.jpg" class="img-thumbnail" alt="photo 3"
+                    style="width:100%; height: 100%;">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                <img id="myImg2" src="photo/15.jpg" class="img-thumbnail" alt="photo 4"
+                    style="width:100%; height: 100%;">
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption">
+        </div>
+        <div class="zoombtn">
+            <i id="zoom1" onclick="zoomPlus()" class="zoom1 fa fa-search-plus" aria-hidden="true"></i>
+            <i id="zoom1" onclick="zoomMinus()" class="zoom1 fa fa-search-minus" aria-hidden="true"></i>
+        </div>
+    </div>
+    <h1>Chapter 58 to 67</h1>
+    <h3>Q1</h3>
+    <div>
+        <h1> DOM </h1>
+        <div id="form-content" class="content">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" />
+            <label for="email">Email</label>
+            <input type="text" id="email123">
+            <button onclick="Q1DataSubmit()">Submit</button>
+        </div>
+        <div id="main-content" class="content">
+            <p class="render"> First Name : Alex</p>
+            <p class="render" id="lastName">Last Name: Bank</p>
+            <p class="render"> Email : alexbank@example.com</p>
+            <p class="render"> Country : Pakistan </p>
+            <p class="render"> contact : +92 300 1234567</p>
+        </div>
+    </div>
+    <p id="display-content"></p>
+    <p id="eleClass">
+
+    </p>
+    <ul id="Q1Data">
+        <li><p>First Name: </p><p id="name1"> </p></li>
+        <li><p>Last Name: </p><p id="name2"> </p></li>
+        <li><p>Email: </p><p id="email12"> </p></li>
+    </ul>
+    <h3>Q2</h3>
+    <ol id="Q2ans">
+        <li id="olli1">Node Type: </li>
+        <li id="olli2">Last Name Node Type: </li>
+        <li id="olli3">Last Name Child Node Type: </li>
+        <li id="olli4">First Child Of Main-Content: </li>
+        <li id="olli5">Last Child Of Main-Content: </li>
+        <li id="olli6">Next Sibiling Of LastName: </li>
+        <li id="olli7">Previous Sibiling Of LastName: </li>
+        <li id="olli8">Parent Node Of Last Name: </li>
+        <li id="olli9">Parent Node type Of Last Name: </li>
+    </ol>
     <script src="app.js"></script>
 </body>
 
