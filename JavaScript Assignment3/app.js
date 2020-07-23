@@ -300,10 +300,12 @@ display_content.innerText = main_content2;
 
 var checkClass = main_content.getElementsByClassName("render");
 var eleClass = document.getElementById("eleClass");
-for (var i = 0; i < checkClass.length; i++) {
-    var insertdata = checkClass[i].innerText;
-    // console.log(checkClass[i].innerText);
-
+var i;
+for (i = 0; i < checkClass.length; i++) {
+    var eleli = document.createElement('li')
+    eleClass.appendChild(eleli);
+    eleli.innerText = checkClass[i].innerHTML;
+    console.log(checkClass[i].innerText);
 }
 
 
@@ -324,11 +326,11 @@ function Q1DataSubmit() {
 }
 // Q2
 var formContent = document.getElementById("form-content");
-var olli1 = document.getElementById("olli1"); 
+var olli1 = document.getElementById("olli1");
 olli1.innerText += formContent.nodeType;
 var lastname1 = document.getElementById("lastName");
 var olli2 = document.getElementById("olli2");
-olli2.innerText += lastname1.nodeType; 
+olli2.innerText += lastname1.nodeType;
 var olli3 = document.getElementById("olli3");
 olli3.innerText += lastname1.firstChild.nodeType;
 var oll = document.getElementById("main-content");
